@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Unit (Converter)</string>
+    <string name="defaultZero">0</string>
+    <string name="defaultAnswer">Click Convert!</string>
+    <string name="convert">Convert</string>
+
+    <string-array name="units">
+        <item>LBS</item>
+        <item>KGS</item>
+    </string-array>
+</resources>
