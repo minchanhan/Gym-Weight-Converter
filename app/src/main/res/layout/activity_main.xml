@@ -48,7 +48,7 @@
         android:id="@+id/txtDisplayAnswer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="172dp"
+        android:layout_marginTop="200dp"
         android:text="@string/defaultAnswer"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -59,10 +59,63 @@
         android:id="@+id/txtSolution"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="35dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtDisplayAnswer" />
+
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="50dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/txtDisplayAnswer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnConvert"
+        app:layout_constraintVertical_bias="0.5">
+
+        <ImageButton
+            android:id="@+id/kg10Btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:color/white"
+            android:contentDescription="@string/AddsValue"
+            app:srcCompat="@drawable/kg10" />
+
+        <ImageButton
+            android:id="@+id/kg15Btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:color/white"
+            android:contentDescription="@string/AddsValue"
+            app:srcCompat="@drawable/kg15" />
+
+        <ImageButton
+            android:id="@+id/kg20Btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:color/white"
+            android:contentDescription="@string/AddsValue"
+            app:srcCompat="@drawable/kg20" />
+
+        <ImageButton
+            android:id="@+id/kg25Btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:color/white"
+            android:contentDescription="@string/AddsValue"
+            app:srcCompat="@drawable/kg25" />
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
