@@ -2,6 +2,7 @@ package com.example.unitconverter;
 
 import android.os.Bundle;
 import android.view.View;
+import android.view.inputmethod.EditorInfo;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -98,8 +99,11 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                         }
                     }
                 }
+                inputWeight.onEditorAction(EditorInfo.IME_ACTION_DONE);
             }
         });
+
+
     }
 
     @Override
