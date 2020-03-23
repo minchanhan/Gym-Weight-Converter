@@ -39,6 +39,8 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
         Button btnConvert = findViewById(R.id.btnConvert);
 
+        ImageButton kg2_5Btn = findViewById(R.id.kg2_5Btn);
+        ImageButton kg5Btn = findViewById(R.id.kg5Btn);
         ImageButton kg10Btn = findViewById(R.id.kg10Btn);
         ImageButton kg15Btn = findViewById(R.id.kg15Btn);
         ImageButton kg20Btn = findViewById(R.id.kg20Btn);
@@ -49,6 +51,8 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         btnConvert.setOnClickListener(this);
 
         // Plate Increment
+        kg2_5Btn.setOnClickListener(this);
+        kg5Btn.setOnClickListener(this);
         kg10Btn.setOnClickListener(this);
         kg15Btn.setOnClickListener(this);
         kg20Btn.setOnClickListener(this);
@@ -149,6 +153,16 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                     }
                 }
                 inputWeight.onEditorAction(EditorInfo.IME_ACTION_DONE); // When convert is pressed, lower keyboard
+                break;
+            case R.id.kg2_5Btn:
+                input += 2.5f; // Add to existing input number value, then convert to string and place in edit text
+                inputStr = Float.toString(input);
+                inputWeight.setText(inputStr);
+                break;
+            case R.id.kg5Btn:
+                input += 5.0f; // Add to existing input number value, then convert to string and place in edit text
+                inputStr = Float.toString(input);
+                inputWeight.setText(inputStr);
                 break;
             case R.id.kg10Btn:
                 input += 10.0f; // Add to existing input number value, then convert to string and place in edit text
