@@ -46,10 +46,11 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
         btnConvert.setOnClickListener(this);
 
-        //kg10Btn.setOnClickListener(this);
-        //kg15Btn.setOnClickListener(this);
-        //kg20Btn.setOnClickListener(this);
-        //kg25Btn.setOnClickListener(this);
+        // Plate Increment
+        kg10Btn.setOnClickListener(this);
+        kg15Btn.setOnClickListener(this);
+        kg20Btn.setOnClickListener(this);
+        kg25Btn.setOnClickListener(this);
     }
 
     @Override
@@ -77,21 +78,28 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         TextView txtDisplayAnswer = findViewById(R.id.txtDisplayAnswer);
         TextView txtSolution = findViewById(R.id.txtSolution);
         /// Set Up
-        String inputStr = inputWeight.getText().toString();
+        String inputStr = inputWeight.getText().toString(); // text/string value (NULL AT START)
         int inputLen = inputStr.trim().length();
 
-        switch(v.getId()) {
+        // boolean plateInc = false;
+
+        if(inputLen != 0) {
+            input = Float.parseFloat(inputStr);
+        } else {
+            input = 0f; // If the input is empty
+        }
+
+        switch (v.getId()) {
             case R.id.btnConvert:
-                if(inputLen == 0){
+                String answer;
+                String display;
+                String rounded;
+
+                if (inputLen == 0) {
                     String invalid = "Enter a value!";
                     Toast.makeText(getApplicationContext(), invalid, Toast.LENGTH_SHORT).show();
                 } else {
-                    input = Float.parseFloat(inputStr);
-                    String answer;
-                    String display;
-                    String rounded;
-
-                    if (pounds) {
+                    if (pounds) { // If converting from Lbs to Kgs
                         // For txtSolution
                         solution = input / conversion;
                         answer = String.valueOf(solution);
@@ -102,17 +110,17 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                         roundedSoln = (int) solution;
                         int answerLen = answer.length();
                         char firstDecimal = '0'; // If solution is whole number, decimal is 0
-                        for(int i = 0; i < answerLen; ++i){
-                            if(answer.charAt(i) == '.') firstDecimal = answer.charAt(i+1);
+                        for (int i = 0; i < answerLen; ++i) {
+                            if (answer.charAt(i) == '.') firstDecimal = answer.charAt(i + 1);
                         }
                         rounded = roundedSoln + " KGS";
-                        if(firstDecimal >= 48 && firstDecimal <= 52){ // Using Ascii values
+                        if (firstDecimal >= 48 && firstDecimal <= 52) { // Using Ascii values
                             txtDisplayAnswer.setText(rounded); // Bigger, Integer Value
                         } else {
                             String roundUp = (roundedSoln + 1) + " KGS";
                             txtDisplayAnswer.setText(roundUp);
                         }
-                    } else {
+                    } else { // If converting from Kgs to Lbs
                         // For txtSolution
                         solution = input * conversion;
                         answer = String.valueOf(solution);
@@ -123,11 +131,11 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                         roundedSoln = (int) solution;
                         int answerLen = answer.length();
                         char firstDecimal = '0'; // If solution is whole number, decimal is 0
-                        for(int i = 0; i < answerLen; ++i){
-                            if(answer.charAt(i) == '.') firstDecimal = answer.charAt(i+1);
+                        for (int i = 0; i < answerLen; ++i) {
+                            if (answer.charAt(i) == '.') firstDecimal = answer.charAt(i + 1);
                         }
                         rounded = roundedSoln + " LBS";
-                        if(firstDecimal >= 48 && firstDecimal <= 52){ // Using Ascii values
+                        if (firstDecimal >= 48 && firstDecimal <= 52) { // Using Ascii values
                             txtDisplayAnswer.setText(rounded); // Bigger, Integer Value
                         } else {
                             String roundUp = (roundedSoln + 1) + " LBS";
@@ -136,6 +144,28 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                     }
                 }
                 inputWeight.onEditorAction(EditorInfo.IME_ACTION_DONE); // When convert is pressed, lower keyboard
+                break;
+            case R.id.kg10Btn:
+                input += 10.0f; // Add to existing input number value, then convert to string and place in edit text
+                inputStr = Float.toString(input);
+                inputWeight.setText(inputStr);
+                break;
+            case R.id.kg15Btn:
+                input += 15.0f;
+                inputStr = Float.toString(input);
+                inputWeight.setText(inputStr);
+                break;
+            case R.id.kg20Btn:
+                input += 20.0f;
+                inputStr = Float.toString(input);
+                inputWeight.setText(inputStr);
+                break;
+            case R.id.kg25Btn:
+                input += 25.0f;
+                inputStr = Float.toString(input);
+                inputWeight.setText(inputStr);
+                break;
+            default:
                 break;
         }
     }
