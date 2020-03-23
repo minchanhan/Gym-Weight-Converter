@@ -44,6 +44,8 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         ImageButton kg20Btn = findViewById(R.id.kg20Btn);
         ImageButton kg25Btn = findViewById(R.id.kg25Btn);
 
+        ImageButton kgBarBtn = findViewById(R.id.kgBarBtn);
+
         btnConvert.setOnClickListener(this);
 
         // Plate Increment
@@ -51,6 +53,9 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         kg15Btn.setOnClickListener(this);
         kg20Btn.setOnClickListener(this);
         kg25Btn.setOnClickListener(this);
+
+        // Bar Increment
+        kgBarBtn.setOnClickListener(this);
     }
 
     @Override
@@ -156,6 +161,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                 inputWeight.setText(inputStr);
                 break;
             case R.id.kg20Btn:
+            case R.id.kgBarBtn:
                 input += 20.0f;
                 inputStr = Float.toString(input);
                 inputWeight.setText(inputStr);
