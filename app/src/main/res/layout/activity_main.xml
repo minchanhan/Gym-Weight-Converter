@@ -50,7 +50,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="250dp"
         android:text="@string/defaultAnswer"
-        android:textSize="20sp"
+        android:textSize="25sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnConvert" />
@@ -67,75 +67,157 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtDisplayAnswer" />
 
-    <LinearLayout
-        android:id="@+id/linearLayoutKG"
-        android:layout_width="398dp"
-        android:layout_height="58dp"
-        android:layout_marginStart="5dp"
-        android:layout_marginLeft="5dp"
-        android:layout_marginTop="35dp"
-        android:layout_marginEnd="5dp"
-        android:layout_marginRight="5dp"
-        android:orientation="horizontal"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintPlates"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="30dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnConvert">
 
-        <ImageButton
-            android:id="@+id/kg2_5Btn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@android:color/white"
-            android:contentDescription="@string/AddsValue"
-            app:srcCompat="@drawable/kg2_5" />
+        <LinearLayout
+            android:id="@+id/linearLayoutLB"
+            android:layout_width="398dp"
+            android:layout_height="58dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
-        <ImageButton
-            android:id="@+id/kg5Btn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@android:color/white"
-            android:contentDescription="@string/AddsValue"
-            app:srcCompat="@drawable/kg5" />
+            <ImageButton
+                android:id="@+id/lb2_5Btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@android:color/white"
+                android:contentDescription="@string/AddsValue"
+                app:srcCompat="@drawable/lb2_5" />
 
-        <ImageButton
-            android:id="@+id/kg10Btn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@android:color/white"
-            android:contentDescription="@string/AddsValue"
-            app:srcCompat="@drawable/kg10" />
+            <ImageButton
+                android:id="@+id/lb5Btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@android:color/white"
+                android:contentDescription="@string/AddsValue"
+                app:srcCompat="@drawable/lb5" />
 
-        <ImageButton
-            android:id="@+id/kg15Btn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@android:color/white"
-            android:contentDescription="@string/AddsValue"
-            app:srcCompat="@drawable/kg15" />
+            <ImageButton
+                android:id="@+id/lb10Btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@android:color/white"
+                android:contentDescription="@string/AddsValue"
+                app:srcCompat="@drawable/lb10" />
 
-        <ImageButton
-            android:id="@+id/kg20Btn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@android:color/white"
-            android:contentDescription="@string/AddsValue"
-            app:srcCompat="@drawable/kg20" />
+            <ImageButton
+                android:id="@+id/lb25Btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@android:color/white"
+                android:contentDescription="@string/AddsValue"
+                app:srcCompat="@drawable/lb25" />
 
-        <ImageButton
-            android:id="@+id/kg25Btn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@android:color/white"
-            android:contentDescription="@string/AddsValue"
-            app:srcCompat="@drawable/kg25" />
+            <ImageButton
+                android:id="@+id/lb35Btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@android:color/white"
+                android:contentDescription="@string/AddsValue"
+                app:srcCompat="@drawable/lb35" />
 
-    </LinearLayout>
+            <ImageButton
+                android:id="@+id/lb45Btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@android:color/white"
+                android:contentDescription="@string/AddsValue"
+                app:srcCompat="@drawable/lb45" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayoutKG"
+            android:layout_width="398dp"
+            android:layout_height="58dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageButton
+                android:id="@+id/kg2_5Btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@android:color/white"
+                android:contentDescription="@string/AddsValue"
+                app:srcCompat="@drawable/kg2_5" />
+
+            <ImageButton
+                android:id="@+id/kg5Btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@android:color/white"
+                android:contentDescription="@string/AddsValue"
+                app:srcCompat="@drawable/kg5" />
+
+            <ImageButton
+                android:id="@+id/kg10Btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@android:color/white"
+                android:contentDescription="@string/AddsValue"
+                app:srcCompat="@drawable/kg10" />
+
+            <ImageButton
+                android:id="@+id/kg15Btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@android:color/white"
+                android:contentDescription="@string/AddsValue"
+                app:srcCompat="@drawable/kg15" />
+
+            <ImageButton
+                android:id="@+id/kg20Btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@android:color/white"
+                android:contentDescription="@string/AddsValue"
+                app:srcCompat="@drawable/kg20" />
+
+            <ImageButton
+                android:id="@+id/kg25Btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@android:color/white"
+                android:contentDescription="@string/AddsValue"
+                app:srcCompat="@drawable/kg25" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
 
     <ImageButton
         android:id="@+id/kgBarBtn"
@@ -146,7 +228,19 @@
         android:contentDescription="@string/AddsValue"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayoutKG"
+        app:layout_constraintTop_toBottomOf="@+id/constraintPlates"
         app:srcCompat="@drawable/barbellkg_og" />
+
+    <ImageButton
+        android:id="@+id/lbBarBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@android:color/white"
+        android:contentDescription="@string/AddsValue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintPlates"
+        app:srcCompat="@drawable/barbelllb_og" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

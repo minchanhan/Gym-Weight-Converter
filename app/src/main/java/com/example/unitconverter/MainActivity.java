@@ -1,6 +1,7 @@
 package com.example.unitconverter;
 
 import android.os.Bundle;
+import android.provider.ContactsContract;
 import android.view.View;
 import android.view.inputmethod.EditorInfo;
 import android.widget.AdapterView;
@@ -8,6 +9,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -39,6 +41,13 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
         Button btnConvert = findViewById(R.id.btnConvert);
 
+        ImageButton lb2_5Btn = findViewById(R.id.lb2_5Btn);
+        ImageButton lb5Btn = findViewById(R.id.lb5Btn);
+        ImageButton lb10Btn = findViewById(R.id.lb10Btn);
+        ImageButton lb25Btn = findViewById(R.id.lb25Btn);
+        ImageButton lb35Btn = findViewById(R.id.lb35Btn);
+        ImageButton lb45Btn = findViewById(R.id.lb45Btn);
+
         ImageButton kg2_5Btn = findViewById(R.id.kg2_5Btn);
         ImageButton kg5Btn = findViewById(R.id.kg5Btn);
         ImageButton kg10Btn = findViewById(R.id.kg10Btn);
@@ -46,11 +55,20 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         ImageButton kg20Btn = findViewById(R.id.kg20Btn);
         ImageButton kg25Btn = findViewById(R.id.kg25Btn);
 
+        ImageButton lbBarBtn = findViewById(R.id.lbBarBtn);
         ImageButton kgBarBtn = findViewById(R.id.kgBarBtn);
 
+        // Convert
         btnConvert.setOnClickListener(this);
 
         // Plate Increment
+        lb2_5Btn.setOnClickListener(this);
+        lb5Btn.setOnClickListener(this);
+        lb10Btn.setOnClickListener(this);
+        lb35Btn.setOnClickListener(this);
+        lb25Btn.setOnClickListener(this);
+        lb45Btn.setOnClickListener(this);
+
         kg2_5Btn.setOnClickListener(this);
         kg5Btn.setOnClickListener(this);
         kg10Btn.setOnClickListener(this);
@@ -59,6 +77,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         kg25Btn.setOnClickListener(this);
 
         // Bar Increment
+        lbBarBtn.setOnClickListener(this);
         kgBarBtn.setOnClickListener(this);
     }
 
@@ -66,14 +85,26 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
         // String unitText = parent.getItemAtPosition(position).toString(); To use if I want to
         // get "LBS" or "KGS" directly from array
+        LinearLayout linearLB = findViewById(R.id.linearLayoutLB);
+        LinearLayout linearKG = findViewById(R.id.linearLayoutKG);
+        ImageButton lbBarBtn = findViewById(R.id.lbBarBtn); // Potentially change, so I don't have to
+        ImageButton kgBarBtn = findViewById(R.id.kgBarBtn); // initialize OnCreate and in here ******
 
         String message; // Initialize message
         if(position == 0){
             message = "LBS to KGS";
             pounds = true;
+            linearLB.setVisibility(View.VISIBLE);
+            lbBarBtn.setVisibility(View.VISIBLE);
+            linearKG.setVisibility(View.GONE);
+            kgBarBtn.setVisibility(View.GONE);
         } else {
             message = "KGS to LBS";
             pounds = false;
+            linearKG.setVisibility(View.VISIBLE);
+            kgBarBtn.setVisibility(View.VISIBLE);
+            linearLB.setVisibility(View.GONE);
+            lbBarBtn.setVisibility(View.GONE);
         }
 
         Toast.makeText(parent.getContext(), message, Toast.LENGTH_SHORT).show(); /// should be message
@@ -154,16 +185,19 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                 }
                 inputWeight.onEditorAction(EditorInfo.IME_ACTION_DONE); // When convert is pressed, lower keyboard
                 break;
+            case R.id.lb2_5Btn:
             case R.id.kg2_5Btn:
                 input += 2.5f; // Add to existing input number value, then convert to string and place in edit text
                 inputStr = Float.toString(input);
                 inputWeight.setText(inputStr);
                 break;
+            case R.id.lb5Btn:
             case R.id.kg5Btn:
                 input += 5.0f; // Add to existing input number value, then convert to string and place in edit text
                 inputStr = Float.toString(input);
                 inputWeight.setText(inputStr);
                 break;
+            case R.id.lb10Btn:
             case R.id.kg10Btn:
                 input += 10.0f; // Add to existing input number value, then convert to string and place in edit text
                 inputStr = Float.toString(input);
@@ -180,8 +214,20 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                 inputStr = Float.toString(input);
                 inputWeight.setText(inputStr);
                 break;
+            case R.id.lb25Btn:
             case R.id.kg25Btn:
                 input += 25.0f;
+                inputStr = Float.toString(input);
+                inputWeight.setText(inputStr);
+                break;
+            case R.id.lb35Btn:
+                input += 35.0f;
+                inputStr = Float.toString(input);
+                inputWeight.setText(inputStr);
+                break;
+            case R.id.lb45Btn:
+            case R.id.lbBarBtn:
+                input += 45.0f;
                 inputStr = Float.toString(input);
                 inputWeight.setText(inputStr);
                 break;
@@ -190,4 +236,3 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         }
     }
 }
-// Using Git
