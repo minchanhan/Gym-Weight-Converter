@@ -172,11 +172,11 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                         for (int i = 0; i < answerLen; ++i) {
                             if (answer.charAt(i) == '.') firstDecimal = answer.charAt(i + 1);
                         }
-                        rounded = roundedSoln + " KGS";
+                        rounded = "Rounded: " + roundedSoln + " KGS";
                         if (firstDecimal >= 48 && firstDecimal <= 52) { // Using Ascii values
                             txtDisplayAnswer.setText(rounded); // Bigger, Integer Value
                         } else {
-                            String roundUp = (roundedSoln + 1) + " KGS";
+                            String roundUp = "Rounded: " + (roundedSoln + 1) + " KGS";
                             txtDisplayAnswer.setText(roundUp);
                         }
                     } else { // If converting from Kgs to Lbs
@@ -193,11 +193,11 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                         for (int i = 0; i < answerLen; ++i) {
                             if (answer.charAt(i) == '.') firstDecimal = answer.charAt(i + 1);
                         }
-                        rounded = roundedSoln + " LBS";
+                        rounded = "Rounded: " + roundedSoln + " LBS";
                         if (firstDecimal >= 48 && firstDecimal <= 52) { // Using Ascii values
                             txtDisplayAnswer.setText(rounded); // Bigger, Integer Value
                         } else {
-                            String roundUp = (roundedSoln + 1) + " LBS";
+                            String roundUp = "Rounded: " + (roundedSoln + 1) + " LBS";
                             txtDisplayAnswer.setText(roundUp);
                         }
                     }
