@@ -43,6 +43,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         spinUnit.setOnItemSelectedListener(this);
 
         Button btnConvert = findViewById(R.id.btnConvert);
+        Button btnClear = findViewById(R.id.btnClear);
 
         ImageButton lb2_5Btn = findViewById(R.id.lb2_5Btn);
         ImageButton lb5Btn = findViewById(R.id.lb5Btn);
@@ -64,6 +65,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
         // Convert
         btnConvert.setOnClickListener(this);
+        btnClear.setOnClickListener(this);
 
         // Plate Increment
         lb2_5Btn.setOnClickListener(this);
@@ -187,6 +189,11 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                     }
                 }
                 inputWeight.onEditorAction(EditorInfo.IME_ACTION_DONE); // When convert is pressed, lower keyboard
+                break;
+            case R.id.btnClear:
+                input = 0f;
+                inputStr = Float.toString(input);
+                inputWeight.setText(inputStr);
                 break;
             case R.id.lb2_5Btn:
             case R.id.kg2_5Btn:
