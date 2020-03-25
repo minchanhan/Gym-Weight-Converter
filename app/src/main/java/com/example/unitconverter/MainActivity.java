@@ -93,22 +93,36 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         // get "LBS" or "KGS" directly from array
 
         LinearLayout linearLB = findViewById(R.id.linearLayoutLB);
+        LinearLayout linearLB2 = findViewById(R.id.linearLayoutLB2);
+        LinearLayout linearLB3 = findViewById(R.id.linearLayoutLB3);
         LinearLayout linearKG = findViewById(R.id.linearLayoutKG);
+        LinearLayout linearKG2 = findViewById(R.id.linearLayoutKG2);
+        LinearLayout linearKG3 = findViewById(R.id.linearLayoutKG3);
 
         String message; // Initialize message
         if(position == 0){
             message = "LBS to KGS";
             pounds = true;
             linearLB.setVisibility(View.VISIBLE);
+            linearLB2.setVisibility(View.VISIBLE);
+            linearLB3.setVisibility(View.VISIBLE);
             lbBarBtn.setVisibility(View.VISIBLE);
+
             linearKG.setVisibility(View.GONE);
+            linearKG2.setVisibility(View.GONE);
+            linearKG3.setVisibility(View.GONE);
             kgBarBtn.setVisibility(View.GONE);
         } else {
             message = "KGS to LBS";
             pounds = false;
             linearKG.setVisibility(View.VISIBLE);
+            linearKG2.setVisibility(View.VISIBLE);
+            linearKG3.setVisibility(View.VISIBLE);
             kgBarBtn.setVisibility(View.VISIBLE);
+
             linearLB.setVisibility(View.GONE);
+            linearLB2.setVisibility(View.GONE);
+            linearLB3.setVisibility(View.GONE);
             lbBarBtn.setVisibility(View.GONE);
         }
 

@@ -39,8 +39,8 @@
         android:layout_width="98dp"
         android:layout_height="49dp"
         android:layout_marginTop="20dp"
-        android:layout_marginEnd="100dp"
-        android:layout_marginRight="100dp"
+        android:layout_marginEnd="110dp"
+        android:layout_marginRight="110dp"
         android:text="@string/convert"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -50,8 +50,8 @@
         android:id="@+id/btnClear"
         android:layout_width="98dp"
         android:layout_height="49dp"
-        android:layout_marginStart="100dp"
-        android:layout_marginLeft="100dp"
+        android:layout_marginStart="110dp"
+        android:layout_marginLeft="110dp"
         android:layout_marginTop="20dp"
         android:text="@string/clear"
         app:layout_constraintEnd_toEndOf="parent"
@@ -62,7 +62,7 @@
         android:id="@+id/txtDisplayAnswer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="250dp"
+        android:layout_marginTop="315dp"
         android:text="@string/defaultAnswer"
         android:textSize="25sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -73,30 +73,29 @@
         android:id="@+id/txtSolution"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="35dp"
-        android:layout_marginBottom="85dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtDisplayAnswer" />
+        app:layout_constraintTop_toBottomOf="@+id/txtDisplayAnswer"
+        app:layout_constraintVertical_bias="0.45" />
+
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintPlates"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_marginTop="30dp"
+        android:layout_width="220dp"
+        android:layout_height="210dp"
+        android:layout_marginTop="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnConvert">
 
         <LinearLayout
             android:id="@+id/linearLayoutLB"
-            android:layout_width="398dp"
-            android:layout_height="58dp"
+            android:layout_width="200dp"
+            android:layout_height="60dp"
             android:layout_marginStart="5dp"
             android:layout_marginLeft="5dp"
-            android:layout_marginTop="1dp"
+            android:layout_marginTop="5dp"
             android:layout_marginEnd="5dp"
             android:layout_marginRight="5dp"
             android:orientation="horizontal"
@@ -107,7 +106,9 @@
             <ImageButton
                 android:id="@+id/lb2_5Btn"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="58dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"
                 android:layout_weight="1"
                 android:background="@android:color/white"
                 android:contentDescription="@string/AddsValue"
@@ -116,57 +117,22 @@
             <ImageButton
                 android:id="@+id/lb5Btn"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="58dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"
                 android:layout_weight="1"
                 android:background="@android:color/white"
                 android:contentDescription="@string/AddsValue"
                 app:srcCompat="@drawable/lb5" />
-
-            <ImageButton
-                android:id="@+id/lb10Btn"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@android:color/white"
-                android:contentDescription="@string/AddsValue"
-                app:srcCompat="@drawable/lb10" />
-
-            <ImageButton
-                android:id="@+id/lb25Btn"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@android:color/white"
-                android:contentDescription="@string/AddsValue"
-                app:srcCompat="@drawable/lb25" />
-
-            <ImageButton
-                android:id="@+id/lb35Btn"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@android:color/white"
-                android:contentDescription="@string/AddsValue"
-                app:srcCompat="@drawable/lb35" />
-
-            <ImageButton
-                android:id="@+id/lb45Btn"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@android:color/white"
-                android:contentDescription="@string/AddsValue"
-                app:srcCompat="@drawable/lb45" />
-
         </LinearLayout>
 
         <LinearLayout
             android:id="@+id/linearLayoutKG"
-            android:layout_width="398dp"
-            android:layout_height="58dp"
+            android:layout_width="200dp"
+            android:layout_height="60dp"
             android:layout_marginStart="5dp"
             android:layout_marginLeft="5dp"
-            android:layout_marginTop="1dp"
+            android:layout_marginTop="5dp"
             android:layout_marginEnd="5dp"
             android:layout_marginRight="5dp"
             android:orientation="horizontal"
@@ -177,7 +143,9 @@
             <ImageButton
                 android:id="@+id/kg2_5Btn"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="58dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"
                 android:layout_weight="1"
                 android:background="@android:color/white"
                 android:contentDescription="@string/AddsValue"
@@ -186,16 +154,72 @@
             <ImageButton
                 android:id="@+id/kg5Btn"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="58dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"
                 android:layout_weight="1"
                 android:background="@android:color/white"
                 android:contentDescription="@string/AddsValue"
                 app:srcCompat="@drawable/kg5" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayoutLB2"
+            android:layout_width="200dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayoutLB">
+
+            <ImageButton
+                android:id="@+id/lb10Btn"
+                android:layout_width="wrap_content"
+                android:layout_height="58dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"
+                android:layout_weight="1"
+                android:background="@android:color/white"
+                android:contentDescription="@string/AddsValue"
+                app:srcCompat="@drawable/lb10" />
+
+            <ImageButton
+                android:id="@+id/lb25Btn"
+                android:layout_width="wrap_content"
+                android:layout_height="58dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"
+                android:layout_weight="1"
+                android:background="@android:color/white"
+                android:contentDescription="@string/AddsValue"
+                app:srcCompat="@drawable/lb25" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayoutKG2"
+            android:layout_width="200dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayoutKG">
 
             <ImageButton
                 android:id="@+id/kg10Btn"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="58dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"
                 android:layout_weight="1"
                 android:background="@android:color/white"
                 android:contentDescription="@string/AddsValue"
@@ -204,16 +228,72 @@
             <ImageButton
                 android:id="@+id/kg15Btn"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="58dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"
                 android:layout_weight="1"
                 android:background="@android:color/white"
                 android:contentDescription="@string/AddsValue"
                 app:srcCompat="@drawable/kg15" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayoutLB3"
+            android:layout_width="200dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayoutLB2">
+
+            <ImageButton
+                android:id="@+id/lb35Btn"
+                android:layout_width="wrap_content"
+                android:layout_height="58dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"
+                android:layout_weight="1"
+                android:background="@android:color/white"
+                android:contentDescription="@string/AddsValue"
+                app:srcCompat="@drawable/lb35" />
+
+            <ImageButton
+                android:id="@+id/lb45Btn"
+                android:layout_width="wrap_content"
+                android:layout_height="58dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"
+                android:layout_weight="1"
+                android:background="@android:color/white"
+                android:contentDescription="@string/AddsValue"
+                app:srcCompat="@drawable/lb45" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayoutKG3"
+            android:layout_width="200dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayoutKG2">
 
             <ImageButton
                 android:id="@+id/kg20Btn"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="58dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"
                 android:layout_weight="1"
                 android:background="@android:color/white"
                 android:contentDescription="@string/AddsValue"
@@ -222,12 +302,13 @@
             <ImageButton
                 android:id="@+id/kg25Btn"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="58dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"
                 android:layout_weight="1"
                 android:background="@android:color/white"
                 android:contentDescription="@string/AddsValue"
                 app:srcCompat="@drawable/kg25" />
-
         </LinearLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
@@ -237,7 +318,7 @@
         android:id="@+id/kgBarBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="7dp"
         android:background="@android:color/white"
         android:contentDescription="@string/AddsValue"
         app:layout_constraintEnd_toEndOf="parent"
@@ -249,7 +330,7 @@
         android:id="@+id/lbBarBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="7dp"
         android:background="@android:color/white"
         android:contentDescription="@string/AddsValue"
         app:layout_constraintEnd_toEndOf="parent"
