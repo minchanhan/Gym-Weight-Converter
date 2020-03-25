@@ -27,6 +27,9 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     float solution = 0f;
     int roundedSoln = 0;
 
+    ImageButton lbBarBtn;
+    ImageButton kgBarBtn;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -55,8 +58,9 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         ImageButton kg20Btn = findViewById(R.id.kg20Btn);
         ImageButton kg25Btn = findViewById(R.id.kg25Btn);
 
-        ImageButton lbBarBtn = findViewById(R.id.lbBarBtn);
-        ImageButton kgBarBtn = findViewById(R.id.kgBarBtn);
+        lbBarBtn = findViewById(R.id.lbBarBtn);
+        kgBarBtn = findViewById(R.id.kgBarBtn);
+
 
         // Convert
         btnConvert.setOnClickListener(this);
@@ -85,10 +89,9 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
         // String unitText = parent.getItemAtPosition(position).toString(); To use if I want to
         // get "LBS" or "KGS" directly from array
+
         LinearLayout linearLB = findViewById(R.id.linearLayoutLB);
         LinearLayout linearKG = findViewById(R.id.linearLayoutKG);
-        ImageButton lbBarBtn = findViewById(R.id.lbBarBtn); // Potentially change, so I don't have to
-        ImageButton kgBarBtn = findViewById(R.id.kgBarBtn); // initialize OnCreate and in here ******
 
         String message; // Initialize message
         if(position == 0){
