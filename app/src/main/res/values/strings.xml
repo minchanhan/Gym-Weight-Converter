@@ -11,4 +11,11 @@
         <item>LBS</item>
         <item>KGS</item>
     </string-array>
+
+    <string name="about">This is my first official app and I\'d appreciate your feedback :)</string>
+    <string name="about2">Let me know if you have any suggestions or feature requests!</string>
+    <string name="about3">You can E-mail me at: </string>
+    <string name="about4">Thanks!</string>
+
+
 </resources>

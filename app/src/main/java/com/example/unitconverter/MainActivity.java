@@ -1,7 +1,10 @@
 package com.example.unitconverter;
 
+import android.content.DialogInterface;
 import android.os.Bundle;
-import android.provider.ContactsContract;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.inputmethod.EditorInfo;
 import android.widget.AdapterView;
@@ -14,9 +17,10 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
-
-import org.w3c.dom.Text;
+import androidx.appcompat.widget.Toolbar;
 
 public class MainActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener, View.OnClickListener {
 
@@ -34,6 +38,9 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
 
         // Initialize Widgets
         Spinner spinUnit = findViewById(R.id.spinUnit);
@@ -85,6 +92,38 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         // Bar Increment
         lbBarBtn.setOnClickListener(this);
         kgBarBtn.setOnClickListener(this);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.toolbar_menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        String message = getString(R.string.about);
+        String message2 = getString(R.string.about2);
+        String message3 = getString(R.string.about3);
+        String message4 = getString(R.string.about4);
+        String finalMessage = message + "\n\n" + message2 + "\n\n" + message3 + "\n\n" + message4;
+
+        switch (item.getItemId()) {
+            case R.id.info:
+                AlertDialog.Builder alert = new AlertDialog.Builder(this);
+                alert.setMessage(finalMessage).setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.dismiss();
+                    }
+                }).setTitle("Thanks for using my app!").create();
+                alert.show();
+                break;
+            default:
+                break;
+        }
+        return true;
     }
 
     @Override
