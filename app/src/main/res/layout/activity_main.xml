@@ -11,8 +11,8 @@
         android:id="@+id/inputWeight"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
-        android:width="170dp"
+        android:layout_marginTop="34dp"
+        android:width="162dp"
         android:autofillHints=""
         android:ems="10"
         android:hint="@string/defaultZero"
@@ -27,49 +27,49 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
 
-        android:layout_marginTop="74dp"
+        android:layout_marginTop="44dp"
         android:textSize="21sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.76"
+        app:layout_constraintHorizontal_bias="0.75"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/btnConvert"
         android:layout_width="98dp"
-        android:layout_height="49dp"
+        android:layout_height="40dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="110dp"
         android:layout_marginRight="110dp"
+        android:background="@drawable/custom_btn"
         android:text="@string/convert"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/inputWeight"
-        android:background="@drawable/custom_btn" />
+        app:layout_constraintTop_toBottomOf="@+id/inputWeight" />
 
     <Button
         android:id="@+id/btnClear"
         android:layout_width="98dp"
-        android:layout_height="49dp"
+        android:layout_height="40dp"
         android:layout_marginStart="110dp"
         android:layout_marginLeft="110dp"
         android:layout_marginTop="20dp"
+        android:background="@drawable/custom_btn"
         android:text="@string/clear"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/inputWeight"
-        android:background="@drawable/custom_btn" />
+        app:layout_constraintTop_toBottomOf="@+id/inputWeight" />
 
     <TextView
         android:id="@+id/txtDisplayAnswer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="315dp"
+        android:layout_marginTop="20dp"
         android:text="@string/defaultAnswer"
         android:textSize="25sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnConvert" />
+        app:layout_constraintTop_toBottomOf="@+id/constraintPlates" />
 
     <TextView
         android:id="@+id/txtSolution"
@@ -79,13 +79,13 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtDisplayAnswer"
-        app:layout_constraintVertical_bias="0.4" />
+        app:layout_constraintVertical_bias="0.3" />
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintPlates"
-        android:layout_width="240dp"
-        android:layout_height="220dp"
+        android:layout_width="365dp"
+        android:layout_height="330dp"
         android:layout_marginTop="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -93,11 +93,11 @@
 
         <LinearLayout
             android:id="@+id/linearLayoutLB"
-            android:layout_width="210dp"
-            android:layout_height="65dp"
+            android:layout_width="340dp"
+            android:layout_height="wrap_content"
             android:layout_marginStart="5dp"
             android:layout_marginLeft="5dp"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="2dp"
             android:layout_marginEnd="5dp"
             android:layout_marginRight="5dp"
             android:orientation="horizontal"
@@ -108,7 +108,7 @@
             <ImageButton
                 android:id="@+id/lb2_5Btn"
                 android:layout_width="wrap_content"
-                android:layout_height="58dp"
+                android:layout_height="80dp"
                 android:layout_marginTop="3dp"
                 android:layout_marginBottom="3dp"
                 android:layout_weight="1"
@@ -119,22 +119,33 @@
             <ImageButton
                 android:id="@+id/lb5Btn"
                 android:layout_width="wrap_content"
-                android:layout_height="58dp"
+                android:layout_height="80dp"
                 android:layout_marginTop="3dp"
                 android:layout_marginBottom="3dp"
                 android:layout_weight="1"
                 android:background="@android:color/white"
                 android:contentDescription="@string/AddsValue"
                 app:srcCompat="@drawable/lb5" />
+
+            <ImageButton
+                android:id="@+id/lb10Btn"
+                android:layout_width="wrap_content"
+                android:layout_height="80dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"
+                android:layout_weight="1"
+                android:background="@android:color/white"
+                android:contentDescription="@string/AddsValue"
+                app:srcCompat="@drawable/lb10" />
         </LinearLayout>
 
         <LinearLayout
             android:id="@+id/linearLayoutKG"
-            android:layout_width="210dp"
-            android:layout_height="65dp"
+            android:layout_width="340dp"
+            android:layout_height="wrap_content"
             android:layout_marginStart="5dp"
             android:layout_marginLeft="5dp"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="2dp"
             android:layout_marginEnd="5dp"
             android:layout_marginRight="5dp"
             android:orientation="horizontal"
@@ -145,7 +156,7 @@
             <ImageButton
                 android:id="@+id/kg2_5Btn"
                 android:layout_width="wrap_content"
-                android:layout_height="58dp"
+                android:layout_height="80dp"
                 android:layout_marginTop="3dp"
                 android:layout_marginBottom="3dp"
                 android:layout_weight="1"
@@ -156,22 +167,33 @@
             <ImageButton
                 android:id="@+id/kg5Btn"
                 android:layout_width="wrap_content"
-                android:layout_height="58dp"
+                android:layout_height="80dp"
                 android:layout_marginTop="3dp"
                 android:layout_marginBottom="3dp"
                 android:layout_weight="1"
                 android:background="@android:color/white"
                 android:contentDescription="@string/AddsValue"
                 app:srcCompat="@drawable/kg5" />
+
+            <ImageButton
+                android:id="@+id/kg10Btn"
+                android:layout_width="wrap_content"
+                android:layout_height="80dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"
+                android:layout_weight="1"
+                android:background="@android:color/white"
+                android:contentDescription="@string/AddsValue"
+                app:srcCompat="@drawable/kg10" />
         </LinearLayout>
 
         <LinearLayout
             android:id="@+id/linearLayoutLB2"
-            android:layout_width="210dp"
-            android:layout_height="65dp"
+            android:layout_width="290dp"
+            android:layout_height="wrap_content"
             android:layout_marginStart="5dp"
             android:layout_marginLeft="5dp"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="2dp"
             android:layout_marginEnd="5dp"
             android:layout_marginRight="5dp"
             android:orientation="horizontal"
@@ -180,35 +202,36 @@
             app:layout_constraintTop_toBottomOf="@+id/linearLayoutLB">
 
             <ImageButton
-                android:id="@+id/lb10Btn"
-                android:layout_width="wrap_content"
-                android:layout_height="58dp"
-                android:layout_marginTop="3dp"
-                android:layout_marginBottom="3dp"
-                android:layout_weight="1"
-                android:background="@android:color/white"
-                android:contentDescription="@string/AddsValue"
-                app:srcCompat="@drawable/lb10" />
-
-            <ImageButton
                 android:id="@+id/lb25Btn"
                 android:layout_width="wrap_content"
-                android:layout_height="58dp"
+                android:layout_height="100dp"
                 android:layout_marginTop="3dp"
                 android:layout_marginBottom="3dp"
                 android:layout_weight="1"
                 android:background="@android:color/white"
                 android:contentDescription="@string/AddsValue"
                 app:srcCompat="@drawable/lb25" />
+
+            <ImageButton
+                android:id="@+id/lb35Btn"
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"
+                android:layout_weight="1"
+                android:background="@android:color/white"
+                android:contentDescription="@string/AddsValue"
+                app:srcCompat="@drawable/lb35" />
+
         </LinearLayout>
 
         <LinearLayout
             android:id="@+id/linearLayoutKG2"
-            android:layout_width="210dp"
-            android:layout_height="65dp"
+            android:layout_width="290dp"
+            android:layout_height="wrap_content"
             android:layout_marginStart="5dp"
             android:layout_marginLeft="5dp"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="2dp"
             android:layout_marginEnd="5dp"
             android:layout_marginRight="5dp"
             android:orientation="horizontal"
@@ -217,35 +240,36 @@
             app:layout_constraintTop_toBottomOf="@+id/linearLayoutKG">
 
             <ImageButton
-                android:id="@+id/kg10Btn"
-                android:layout_width="wrap_content"
-                android:layout_height="58dp"
-                android:layout_marginTop="3dp"
-                android:layout_marginBottom="3dp"
-                android:layout_weight="1"
-                android:background="@android:color/white"
-                android:contentDescription="@string/AddsValue"
-                app:srcCompat="@drawable/kg10" />
-
-            <ImageButton
                 android:id="@+id/kg15Btn"
                 android:layout_width="wrap_content"
-                android:layout_height="58dp"
+                android:layout_height="100dp"
                 android:layout_marginTop="3dp"
                 android:layout_marginBottom="3dp"
                 android:layout_weight="1"
                 android:background="@android:color/white"
                 android:contentDescription="@string/AddsValue"
                 app:srcCompat="@drawable/kg15" />
+
+            <ImageButton
+                android:id="@+id/kg20Btn"
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"
+                android:layout_weight="1"
+                android:background="@android:color/white"
+                android:contentDescription="@string/AddsValue"
+                app:srcCompat="@drawable/kg20" />
+
         </LinearLayout>
 
         <LinearLayout
             android:id="@+id/linearLayoutLB3"
-            android:layout_width="210dp"
-            android:layout_height="65dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginStart="5dp"
             android:layout_marginLeft="5dp"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="2dp"
             android:layout_marginEnd="5dp"
             android:layout_marginRight="5dp"
             android:orientation="horizontal"
@@ -254,20 +278,9 @@
             app:layout_constraintTop_toBottomOf="@+id/linearLayoutLB2">
 
             <ImageButton
-                android:id="@+id/lb35Btn"
-                android:layout_width="wrap_content"
-                android:layout_height="58dp"
-                android:layout_marginTop="3dp"
-                android:layout_marginBottom="3dp"
-                android:layout_weight="1"
-                android:background="@android:color/white"
-                android:contentDescription="@string/AddsValue"
-                app:srcCompat="@drawable/lb35" />
-
-            <ImageButton
                 android:id="@+id/lb45Btn"
-                android:layout_width="wrap_content"
-                android:layout_height="58dp"
+                android:layout_width="0dp"
+                android:layout_height="120dp"
                 android:layout_marginTop="3dp"
                 android:layout_marginBottom="3dp"
                 android:layout_weight="1"
@@ -278,11 +291,11 @@
 
         <LinearLayout
             android:id="@+id/linearLayoutKG3"
-            android:layout_width="210dp"
-            android:layout_height="65dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginStart="5dp"
             android:layout_marginLeft="5dp"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="2dp"
             android:layout_marginEnd="5dp"
             android:layout_marginRight="5dp"
             android:orientation="horizontal"
@@ -291,20 +304,9 @@
             app:layout_constraintTop_toBottomOf="@+id/linearLayoutKG2">
 
             <ImageButton
-                android:id="@+id/kg20Btn"
-                android:layout_width="wrap_content"
-                android:layout_height="58dp"
-                android:layout_marginTop="3dp"
-                android:layout_marginBottom="3dp"
-                android:layout_weight="1"
-                android:background="@android:color/white"
-                android:contentDescription="@string/AddsValue"
-                app:srcCompat="@drawable/kg20" />
-
-            <ImageButton
                 android:id="@+id/kg25Btn"
-                android:layout_width="wrap_content"
-                android:layout_height="58dp"
+                android:layout_width="0dp"
+                android:layout_height="120dp"
                 android:layout_marginTop="3dp"
                 android:layout_marginBottom="3dp"
                 android:layout_weight="1"
@@ -320,24 +322,28 @@
         android:id="@+id/kgBarBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginStart="260dp"
+        android:layout_marginLeft="260dp"
+        android:layout_marginTop="257dp"
         android:background="@android:color/white"
         android:contentDescription="@string/AddsValue"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constraintPlates"
+        app:layout_constraintTop_toBottomOf="@+id/btnConvert"
         app:srcCompat="@drawable/barbellkg_og" />
 
     <ImageButton
         android:id="@+id/lbBarBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="257dp"
+        android:layout_marginEnd="260dp"
+        android:layout_marginRight="260dp"
         android:background="@android:color/white"
         android:contentDescription="@string/AddsValue"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constraintPlates"
+        app:layout_constraintTop_toBottomOf="@+id/btnConvert"
         app:srcCompat="@drawable/barbelllb_og" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
