@@ -110,8 +110,8 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         String message2 = getString(R.string.about2);
         String finalMessage = message + "\n\n" + message2;
 
-        switch (item.getItemId()) {
-            case R.id.info:
+        if (item.getItemId() == R.id.info) {
+                /*
                 final AlertDialog.Builder thanks = new AlertDialog.Builder(this);
                 thanks.setTitle("Thanks for the help!");
                 thanks.setMessage("Let's return to the app");
@@ -120,35 +120,31 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                     public void onClick(DialogInterface dialog, int which) {
                         dialog.dismiss();
                     }
-                });
+                }); */
 
-                AlertDialog.Builder alert = new AlertDialog.Builder(this);
-                alert.setTitle("Thanks for using my app!").create();
-                alert.setMessage(finalMessage);
-                alert.setPositiveButton("OK, Rate!", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        try {
-                            startActivity(new Intent(Intent.ACTION_VIEW,
-                                    Uri.parse("market://details?id=" + getPackageName())));
-                        } catch (ActivityNotFoundException e) {
-                            startActivity(new Intent(Intent.ACTION_VIEW,
-                                    Uri.parse("http://play.google.com/store/apps/details?id=" + getPackageName())));
-                        }
-                        thanks.show(); // Need to add some sort of delay
+            AlertDialog.Builder alert = new AlertDialog.Builder(this);
+            alert.setTitle("Thanks for using my app!").create();
+            alert.setMessage(finalMessage);
+            alert.setPositiveButton("OK, Rate!", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    try {
+                        startActivity(new Intent(Intent.ACTION_VIEW,
+                                Uri.parse("market://details?id=" + getPackageName())));
+                    } catch (ActivityNotFoundException e) {
+                        startActivity(new Intent(Intent.ACTION_VIEW,
+                                Uri.parse("http://play.google.com/store/apps/details?id=" + getPackageName())));
                     }
-                });
-                alert.setNegativeButton("No thanks", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        dialog.dismiss();
-                    }
-                });
-
-                alert.show();
-                break;
-            default:
-                break;
+                    // thanks.show(); // Need to add some sort of delay
+                }
+            });
+            alert.setNegativeButton("No thanks", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    dialog.dismiss();
+                }
+            });
+            alert.show();
         }
         return true;
     }
