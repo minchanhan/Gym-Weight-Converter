@@ -68,7 +68,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
         lbBarBtn = findViewById(R.id.lbBarBtn);
         kgBarBtn = findViewById(R.id.kgBarBtn);
-
+        kgBarBtn.setVisibility(View.GONE);
 
         // Convert
         btnConvert.setOnClickListener(this);
