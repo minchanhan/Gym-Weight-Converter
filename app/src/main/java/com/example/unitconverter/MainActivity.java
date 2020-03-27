@@ -34,8 +34,11 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     float solution = 0f;
     int roundedSoln = 0;
 
-    ImageButton lbBarBtn;
+    ImageButton lbBarBtn; // Used in onItemSelected()
     ImageButton kgBarBtn;
+
+    String inputStr; // Used in OnClick()
+    EditText inputWeight;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -72,6 +75,10 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         lbBarBtn = findViewById(R.id.lbBarBtn);
         kgBarBtn = findViewById(R.id.kgBarBtn);
         kgBarBtn.setVisibility(View.GONE);
+
+        // Setting up the main EditText
+        inputWeight = findViewById(R.id.inputWeight);
+        inputStr = inputWeight.getText().toString(); // text/string value (NULL AT START)
 
         // Convert
         btnConvert.setOnClickListener(this);
@@ -193,17 +200,18 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
     @Override public void onNothingSelected(AdapterView<?> parent) {} // Not Used
 
+    // Convert new input to string and set it in the EditText input
+    public void setNewWeight() {
+        inputStr = Float.toString(input);
+        inputWeight.setText(inputStr);
+    }
+
     @Override
     public void onClick(View v) {
-        EditText inputWeight = findViewById(R.id.inputWeight);
         TextView txtDisplayAnswer = findViewById(R.id.txtDisplayAnswer);
         TextView txtSolution = findViewById(R.id.txtSolution);
-        /// Set Up
-        String inputStr = inputWeight.getText().toString(); // text/string value (NULL AT START)
+
         int inputLen = inputStr.trim().length();
-
-        // boolean plateInc = false;
-
         if(inputLen != 0) {
             input = Float.parseFloat(inputStr);
         } else {
@@ -268,57 +276,40 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                 break;
             case R.id.btnClear:
                 input = 0f;
-                inputStr = Float.toString(input);
-                inputWeight.setText(inputStr);
                 break;
             case R.id.lb2_5Btn:
             case R.id.kg2_5Btn:
-                input += 2.5f; // Add to existing input number value, then convert to string and place in edit text
-                inputStr = Float.toString(input);
-                inputWeight.setText(inputStr);
+                input += 2.5f; // Add to existing input number value
                 break;
             case R.id.lb5Btn:
             case R.id.kg5Btn:
-                input += 5.0f; // Add to existing input number value, then convert to string and place in edit text
-                inputStr = Float.toString(input);
-                inputWeight.setText(inputStr);
+                input += 5.0f;
                 break;
             case R.id.lb10Btn:
             case R.id.kg10Btn:
-                input += 10.0f; // Add to existing input number value, then convert to string and place in edit text
-                inputStr = Float.toString(input);
-                inputWeight.setText(inputStr);
+                input += 10.0f;
                 break;
             case R.id.kg15Btn:
                 input += 15.0f;
-                inputStr = Float.toString(input);
-                inputWeight.setText(inputStr);
                 break;
             case R.id.kg20Btn:
             case R.id.kgBarBtn:
                 input += 20.0f;
-                inputStr = Float.toString(input);
-                inputWeight.setText(inputStr);
                 break;
             case R.id.lb25Btn:
             case R.id.kg25Btn:
                 input += 25.0f;
-                inputStr = Float.toString(input);
-                inputWeight.setText(inputStr);
                 break;
             case R.id.lb35Btn:
                 input += 35.0f;
-                inputStr = Float.toString(input);
-                inputWeight.setText(inputStr);
                 break;
             case R.id.lb45Btn:
             case R.id.lbBarBtn:
                 input += 45.0f;
-                inputStr = Float.toString(input);
-                inputWeight.setText(inputStr);
                 break;
             default:
                 break;
         }
+        setNewWeight();
     }
 }
