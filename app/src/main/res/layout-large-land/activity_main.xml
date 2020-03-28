@@ -260,11 +260,9 @@
 
     <LinearLayout
         android:id="@+id/linearLayoutLB3"
-        android:layout_width="275dp"
+        android:layout_width="315dp"
         android:layout_height="115dp"
         android:layout_marginTop="165dp"
-        android:layout_marginEnd="3dp"
-        android:layout_marginRight="3dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -296,11 +294,9 @@
 
     <LinearLayout
         android:id="@+id/linearLayoutKG3"
-        android:layout_width="275dp"
+        android:layout_width="315dp"
         android:layout_height="115dp"
         android:layout_marginTop="165dp"
-        android:layout_marginEnd="3dp"
-        android:layout_marginRight="3dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
