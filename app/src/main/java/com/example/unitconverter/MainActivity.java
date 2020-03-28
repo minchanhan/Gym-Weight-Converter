@@ -259,12 +259,10 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                             if (answer.charAt(i) == '.') firstDecimal = answer.charAt(i + 1);
                         }
                         rounded = "Rounded: " + roundedSoln + " KGS";
-                        if (firstDecimal >= 48 && firstDecimal <= 52) { // Using Ascii values
-                            txtDisplayAnswer.setText(rounded); // Bigger, Integer Value
-                        } else {
-                            String roundUp = "Rounded: " + (roundedSoln + 1) + " KGS";
-                            txtDisplayAnswer.setText(roundUp);
+                        if (!(firstDecimal >= 48 && firstDecimal <= 52)) { // Using Ascii values
+                            rounded = "Rounded: " + (roundedSoln + 1) + " KGS";
                         }
+                        txtDisplayAnswer.setText(rounded); // Bigger, Integer Value
                     } else { // If converting from Kgs to Lbs
                         // For txtSolution
                         solution = input * conversion;
@@ -280,12 +278,10 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                             if (answer.charAt(i) == '.') firstDecimal = answer.charAt(i + 1);
                         }
                         rounded = "Rounded: " + roundedSoln + " LBS";
-                        if (firstDecimal >= 48 && firstDecimal <= 52) { // Using Ascii values
-                            txtDisplayAnswer.setText(rounded); // Bigger, Integer Value
-                        } else {
-                            String roundUp = "Rounded: " + (roundedSoln + 1) + " LBS";
-                            txtDisplayAnswer.setText(roundUp);
+                        if (!(firstDecimal >= 48 && firstDecimal <= 52)) {
+                            rounded = "Rounded: " + (roundedSoln + 1) + " LBS";
                         }
+                        txtDisplayAnswer.setText(rounded);
                     }
                 }
                 inputWeight.onEditorAction(EditorInfo.IME_ACTION_DONE); // When convert is pressed, lower keyboard
