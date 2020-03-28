@@ -224,8 +224,8 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
     @Override
     public void onClick(View v) {
-        TextView txtDisplayAnswer = findViewById(R.id.txtDisplayAnswer);
-        TextView txtSolution = findViewById(R.id.txtSolution);
+        TextView txtSolution = findViewById(R.id.txtSolution); // Full solution
+        TextView txtDisplayAnswer = findViewById(R.id.txtDisplayAnswer); // Rounded number
 
         int inputLen = inputStr.trim().length();
         if(inputLen != 0) {
@@ -237,7 +237,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         switch (v.getId()) {
             case R.id.btnConvert:
                 String answer;
-                String display;
+                String fullSolution;
                 String rounded;
 
                 if (inputLen == 0) {
@@ -248,8 +248,8 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                         // For txtSolution
                         solution = input / conversion;
                         answer = String.valueOf(solution);
-                        display = answer + " KGS";
-                        txtSolution.setText(display);
+                        fullSolution = answer + " KGS";
+                        txtSolution.setText(fullSolution);
 
                         // For txtDisplayAnswer
                         roundedSoln = (int) solution;
@@ -269,8 +269,8 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                         // For txtSolution
                         solution = input * conversion;
                         answer = String.valueOf(solution);
-                        display = answer + " LBS";
-                        txtSolution.setText(display);
+                        fullSolution = answer + " LBS";
+                        txtSolution.setText(fullSolution);
 
                         // For txtDisplayAnswer
                         roundedSoln = (int) solution;
