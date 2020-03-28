@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".MainActivity">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar"
+        />
+
+    <EditText
+        android:id="@+id/inputWeight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="34dp"
+        android:width="162dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/defaultZero"
+        android:inputType="numberDecimal"
+        android:maxLength="10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+    <Spinner
+        android:id="@+id/spinUnit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:textSize="21sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.65"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+    <Button
+        android:id="@+id/btnConvert"
+        android:layout_width="98dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="110dp"
+        android:layout_marginRight="110dp"
+        android:background="@drawable/custom_btn"
+        android:text="@string/convert"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputWeight" />
+
+    <Button
+        android:id="@+id/btnClear"
+        android:layout_width="98dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="110dp"
+        android:layout_marginLeft="110dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/custom_btn"
+        android:text="@string/clear"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputWeight" />
+
+    <TextView
+        android:id="@+id/txtDisplayAnswer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="280dp"
+        android:layout_marginBottom="25dp"
+        android:text="@string/defaultAnswer"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+    <TextView
+        android:id="@+id/txtSolution"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="265dp"
+        android:layout_marginEnd="400dp"
+        android:layout_marginRight="400dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+
+    <LinearLayout
+        android:id="@+id/linearLayoutLB"
+        android:layout_width="150dp"
+        android:layout_height="230dp"
+        android:layout_marginTop="30dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toStartOf="@+id/inputWeight"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <ImageButton
+            android:id="@+id/lb2_5Btn"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="3dp"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:background="@android:color/white"
+            android:contentDescription="@string/AddsValue"
+            app:srcCompat="@drawable/lb2_5" />
+
+        <ImageButton
+            android:id="@+id/lb5Btn"
+            android:layout_width="wrap_content"
+            android:layout_height="70dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="3dp"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:background="@android:color/white"
+            android:contentDescription="@string/AddsValue"
+            app:srcCompat="@drawable/lb5" />
+
+        <ImageButton
+            android:id="@+id/lb10Btn"
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="3dp"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:background="@android:color/white"
+            android:contentDescription="@string/AddsValue"
+            app:srcCompat="@drawable/lb10" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayoutLB2"
+        android:layout_width="150dp"
+        android:layout_height="260dp"
+        android:layout_marginTop="40dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toEndOf="@+id/inputWeight"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <ImageButton
+            android:id="@+id/lbBarBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="3dp"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:background="@android:color/white"
+            android:contentDescription="@string/AddsValue"
+            app:srcCompat="@drawable/barbelllb_og"
+            />
+
+        <ImageButton
+            android:id="@+id/lb45Btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="3dp"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:background="@android:color/white"
+            android:contentDescription="@string/AddsValue"
+            app:srcCompat="@drawable/lb45" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayoutKG"
+        android:layout_width="150dp"
+        android:layout_height="230dp"
+        android:layout_marginTop="30dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toStartOf="@+id/inputWeight"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <ImageButton
+            android:id="@+id/kg2_5Btn"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="3dp"
+            android:layout_weight="1"
+            android:background="@android:color/white"
+            android:contentDescription="@string/AddsValue"
+            app:srcCompat="@drawable/kg2_5" />
+
+        <ImageButton
+            android:id="@+id/kg5Btn"
+            android:layout_width="wrap_content"
+            android:layout_height="70dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="3dp"
+            android:layout_weight="1"
+            android:background="@android:color/white"
+            android:contentDescription="@string/AddsValue"
+            app:srcCompat="@drawable/kg5" />
+
+        <ImageButton
+            android:id="@+id/kg10Btn"
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="3dp"
+            android:layout_weight="1"
+            android:background="@android:color/white"
+            android:contentDescription="@string/AddsValue"
+            app:srcCompat="@drawable/kg10" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayoutKG2"
+        android:layout_width="150dp"
+        android:layout_height="260dp"
+        android:layout_marginTop="40dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toEndOf="@+id/inputWeight"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <ImageButton
+            android:id="@+id/kgBarBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="3dp"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:background="@android:color/white"
+            android:contentDescription="@string/AddsValue"
+            app:srcCompat="@drawable/barbellkg_og"
+            />
+
+        <ImageButton
+            android:id="@+id/kg25Btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="3dp"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:background="@android:color/white"
+            android:contentDescription="@string/AddsValue"
+            app:srcCompat="@drawable/kg25" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayoutLB3"
+        android:layout_width="275dp"
+        android:layout_height="115dp"
+        android:layout_marginTop="165dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <ImageButton
+            android:id="@+id/lb25Btn"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="3dp"
+            android:layout_weight="1"
+            android:background="@android:color/white"
+            android:contentDescription="@string/AddsValue"
+            app:srcCompat="@drawable/lb25" />
+
+        <ImageButton
+            android:id="@+id/lb35Btn"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="3dp"
+            android:layout_weight="1"
+            android:background="@android:color/white"
+            android:contentDescription="@string/AddsValue"
+            app:srcCompat="@drawable/lb35" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayoutKG3"
+        android:layout_width="275dp"
+        android:layout_height="115dp"
+        android:layout_marginTop="165dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <ImageButton
+            android:id="@+id/kg15Btn"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="3dp"
+            android:layout_weight="1"
+            android:background="@android:color/white"
+            android:contentDescription="@string/AddsValue"
+            app:srcCompat="@drawable/kg15" />
+
+        <ImageButton
+            android:id="@+id/kg20Btn"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="3dp"
+            android:layout_weight="1"
+            android:background="@android:color/white"
+            android:contentDescription="@string/AddsValue"
+            app:srcCompat="@drawable/kg20" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
