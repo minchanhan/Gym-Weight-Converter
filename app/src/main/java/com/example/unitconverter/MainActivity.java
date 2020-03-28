@@ -5,12 +5,10 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.view.Display;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.WindowManager;
 import android.view.inputmethod.EditorInfo;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -23,7 +21,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -42,6 +39,8 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
     String inputStr; // Used in OnClick()
     EditText inputWeight;
+    TextView txtSolution;
+    TextView txtDisplayAnswer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -116,7 +115,6 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     @Override
     protected void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
-
         outState.putFloat("input", input);
     }
 
@@ -224,8 +222,6 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
     @Override
     public void onClick(View v) {
-        TextView txtSolution = findViewById(R.id.txtSolution); // Full solution
-        TextView txtDisplayAnswer = findViewById(R.id.txtDisplayAnswer); // Rounded number
 
         int inputLen = inputStr.trim().length();
         if(inputLen != 0) {
@@ -236,6 +232,8 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
         switch (v.getId()) {
             case R.id.btnConvert:
+                txtSolution = findViewById(R.id.txtSolution); // Full solution
+                txtDisplayAnswer = findViewById(R.id.txtDisplayAnswer); // Rounded number
                 String answer;
                 String fullSolution;
                 String rounded;
@@ -258,9 +256,9 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                         for (int i = 0; i < answerLen; ++i) {
                             if (answer.charAt(i) == '.') firstDecimal = answer.charAt(i + 1);
                         }
-                        rounded = "Rounded: " + roundedSoln + " KGS";
+                        rounded = roundedSoln + " KGS";
                         if (!(firstDecimal >= 48 && firstDecimal <= 52)) { // Using Ascii values
-                            rounded = "Rounded: " + (roundedSoln + 1) + " KGS";
+                            rounded = (roundedSoln + 1) + " KGS";
                         }
                         txtDisplayAnswer.setText(rounded); // Bigger, Integer Value
                     } else { // If converting from Kgs to Lbs
@@ -277,9 +275,9 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                         for (int i = 0; i < answerLen; ++i) {
                             if (answer.charAt(i) == '.') firstDecimal = answer.charAt(i + 1);
                         }
-                        rounded = "Rounded: " + roundedSoln + " LBS";
+                        rounded = roundedSoln + " LBS";
                         if (!(firstDecimal >= 48 && firstDecimal <= 52)) {
-                            rounded = "Rounded: " + (roundedSoln + 1) + " LBS";
+                            rounded = (roundedSoln + 1) + " LBS";
                         }
                         txtDisplayAnswer.setText(rounded);
                     }
