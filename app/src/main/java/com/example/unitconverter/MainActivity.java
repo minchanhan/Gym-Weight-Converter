@@ -23,6 +23,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -104,6 +105,19 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         // Bar Increment
         lbBarBtn.setOnClickListener(this);
         kgBarBtn.setOnClickListener(this);
+
+        // To maintain variables upon rotation
+        if(savedInstanceState != null) {
+            input = savedInstanceState.getFloat("input");
+            setNewWeight();
+        }
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+
+        outState.putFloat("input", input);
     }
 
     @Override
