@@ -3,8 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
-        android:id="@+id/info"
-        android:title="Info"
+        android:id="@+id/rate"
+        android:title="@string/rate"
         android:icon="@drawable/ic_info_black_24dp"
         app:showAsAction="ifRoom"/>
+
 </menu>

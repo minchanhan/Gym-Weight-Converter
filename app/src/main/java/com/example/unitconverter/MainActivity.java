@@ -127,21 +127,10 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        String message = getString(R.string.about);
-        String message2 = getString(R.string.about2);
-        String finalMessage = message + "\n\n" + message2;
-
-        if (item.getItemId() == R.id.info) {
-                /*
-                final AlertDialog.Builder thanks = new AlertDialog.Builder(this);
-                thanks.setTitle("Thanks for the help!");
-                thanks.setMessage("Let's return to the app");
-                thanks.setPositiveButton("OK", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        dialog.dismiss();
-                    }
-                }); */
+        if (item.getItemId() == R.id.rate) {
+            String message = getString(R.string.about);
+            String message2 = getString(R.string.about2);
+            String finalMessage = message + "\n\n" + message2;
 
             AlertDialog.Builder alert = new AlertDialog.Builder(this);
             alert.setTitle("Thanks for using my app!").create();
@@ -156,7 +145,6 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                         startActivity(new Intent(Intent.ACTION_VIEW,
                                 Uri.parse("http://play.google.com/store/apps/details?id=" + getPackageName())));
                     }
-                    // thanks.show(); // Need to add some sort of delay
                 }
             });
             alert.setNegativeButton("No thanks", new DialogInterface.OnClickListener() {
