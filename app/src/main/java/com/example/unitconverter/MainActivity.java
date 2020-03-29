@@ -28,7 +28,6 @@ import androidx.appcompat.widget.Toolbar;
 public class MainActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener, View.OnClickListener {
 
     boolean pounds = true; // If user input is in LBS, true. If use input is in KGS, false.
-
     float input = 0f;
     float conversion = 2.205f; // Divide lbs -> kgs, Multiply kgs -> lbs
     float solution = 0f;
@@ -210,7 +209,6 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
     @Override
     public void onClick(View v) {
-
         int inputLen = inputStr.trim().length();
         if(inputLen != 0) {
             input = Float.parseFloat(inputStr);
