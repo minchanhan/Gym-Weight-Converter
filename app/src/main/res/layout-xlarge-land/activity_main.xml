@@ -98,8 +98,6 @@
         android:layout_width="150dp"
         android:layout_height="230dp"
         android:layout_marginTop="30dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginRight="10dp"
         android:orientation="vertical"
         app:layout_constraintEnd_toStartOf="@+id/inputWeight"
         app:layout_constraintStart_toStartOf="parent"
@@ -109,10 +107,10 @@
             android:id="@+id/lb2_5Btn"
             android:layout_width="wrap_content"
             android:layout_height="60dp"
-            android:layout_gravity="center"
             android:layout_marginTop="3dp"
             android:layout_marginBottom="3dp"
             android:layout_weight="1"
+            android:layout_gravity="center"
             android:background="@android:color/white"
             android:contentDescription="@string/AddsValue"
             app:srcCompat="@drawable/lb2_5" />
@@ -121,10 +119,10 @@
             android:id="@+id/lb5Btn"
             android:layout_width="wrap_content"
             android:layout_height="70dp"
-            android:layout_gravity="center"
             android:layout_marginTop="3dp"
             android:layout_marginBottom="3dp"
             android:layout_weight="1"
+            android:layout_gravity="center"
             android:background="@android:color/white"
             android:contentDescription="@string/AddsValue"
             app:srcCompat="@drawable/lb5" />
@@ -133,10 +131,10 @@
             android:id="@+id/lb10Btn"
             android:layout_width="wrap_content"
             android:layout_height="80dp"
-            android:layout_gravity="center"
             android:layout_marginTop="3dp"
             android:layout_marginBottom="3dp"
             android:layout_weight="1"
+            android:layout_gravity="center"
             android:background="@android:color/white"
             android:contentDescription="@string/AddsValue"
             app:srcCompat="@drawable/lb10" />
@@ -147,34 +145,33 @@
         android:id="@+id/linearLayoutLB2"
         android:layout_width="150dp"
         android:layout_height="260dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginLeft="10dp"
         android:layout_marginTop="40dp"
         android:orientation="vertical"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/inputWeight"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar">
 
         <ImageButton
             android:id="@+id/lbBarBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
             android:layout_marginTop="3dp"
             android:layout_marginBottom="3dp"
             android:layout_weight="1"
+            android:layout_gravity="center"
             android:background="@android:color/white"
             android:contentDescription="@string/AddsValue"
-            app:srcCompat="@drawable/barbelllb_og" />
+            app:srcCompat="@drawable/barbelllb_og"
+            />
 
         <ImageButton
             android:id="@+id/lb45Btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
             android:layout_marginTop="3dp"
             android:layout_marginBottom="3dp"
             android:layout_weight="1"
+            android:layout_gravity="center"
             android:background="@android:color/white"
             android:contentDescription="@string/AddsValue"
             app:srcCompat="@drawable/lb45" />
@@ -185,8 +182,6 @@
         android:layout_width="150dp"
         android:layout_height="230dp"
         android:layout_marginTop="30dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginRight="10dp"
         android:orientation="vertical"
         app:layout_constraintEnd_toStartOf="@+id/inputWeight"
         app:layout_constraintStart_toStartOf="parent"
@@ -233,34 +228,33 @@
         android:id="@+id/linearLayoutKG2"
         android:layout_width="150dp"
         android:layout_height="260dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginLeft="10dp"
         android:layout_marginTop="40dp"
         android:orientation="vertical"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/inputWeight"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar">
 
         <ImageButton
             android:id="@+id/kgBarBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
             android:layout_marginTop="3dp"
             android:layout_marginBottom="3dp"
             android:layout_weight="1"
+            android:layout_gravity="center"
             android:background="@android:color/white"
             android:contentDescription="@string/AddsValue"
-            app:srcCompat="@drawable/barbellkg_og" />
+            app:srcCompat="@drawable/barbellkg_og"
+            />
 
         <ImageButton
             android:id="@+id/kg25Btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
             android:layout_marginTop="3dp"
             android:layout_marginBottom="3dp"
             android:layout_weight="1"
+            android:layout_gravity="center"
             android:background="@android:color/white"
             android:contentDescription="@string/AddsValue"
             app:srcCompat="@drawable/kg25" />
@@ -268,7 +262,7 @@
 
     <LinearLayout
         android:id="@+id/linearLayoutLB3"
-        android:layout_width="295dp"
+        android:layout_width="305dp"
         android:layout_height="115dp"
         android:layout_marginTop="165dp"
         android:orientation="horizontal"
@@ -302,7 +296,7 @@
 
     <LinearLayout
         android:id="@+id/linearLayoutKG3"
-        android:layout_width="295dp"
+        android:layout_width="305dp"
         android:layout_height="115dp"
         android:layout_marginTop="165dp"
         android:orientation="horizontal"
