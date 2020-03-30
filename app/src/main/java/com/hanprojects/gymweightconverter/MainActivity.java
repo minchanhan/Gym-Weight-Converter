@@ -1,4 +1,4 @@
-package com.example.unitconverter;
+package com.hanprojects.gymweightconverter;
 
 import android.content.ActivityNotFoundException;
 import android.content.DialogInterface;

@@ -1,4 +1,4 @@
-package com.example.unitconverter;
+package com.hanprojects.gymweightconverter;
 
 import android.content.Context;
 
@@ -22,6 +22,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
 
-        assertEquals("com.example.unitconverter", appContext.getPackageName());
+        assertEquals("com.hanprojects.gymweightconverter", appContext.getPackageName());
     }
 }
