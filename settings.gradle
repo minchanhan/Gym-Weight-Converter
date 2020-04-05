@@ -1,2 +1,2 @@
 include ':app'
-rootProject.name='Unit (Converter)'
+rootProject.name='Gym Weight Converter'
