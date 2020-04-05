@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Unit (Converter)</string>
+    <string name="app_name">Gym Weight Converter</string>
     <string name="defaultZero">0</string>
     <string name="defaultAnswer">Click Convert!</string>
     <string name="convert">Convert</string>

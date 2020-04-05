@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF"
     tools:context=".MainActivity">
 
     <include
@@ -121,7 +120,7 @@
                 android:layout_marginTop="3dp"
                 android:layout_marginBottom="3dp"
                 android:layout_weight="1"
-                android:background="@android:color/white"
+                android:background="@android:color/transparent"
                 android:contentDescription="@string/AddsValue"
                 app:srcCompat="@drawable/lb2_5" />
 
@@ -132,7 +131,7 @@
                 android:layout_marginTop="3dp"
                 android:layout_marginBottom="3dp"
                 android:layout_weight="1"
-                android:background="@android:color/white"
+                android:background="@android:color/transparent"
                 android:contentDescription="@string/AddsValue"
                 app:srcCompat="@drawable/lb5" />
 
@@ -143,7 +142,7 @@
                 android:layout_marginTop="3dp"
                 android:layout_marginBottom="3dp"
                 android:layout_weight="1"
-                android:background="@android:color/white"
+                android:background="@android:color/transparent"
                 android:contentDescription="@string/AddsValue"
                 app:srcCompat="@drawable/lb10" />
         </LinearLayout>
@@ -169,7 +168,7 @@
                 android:layout_marginTop="3dp"
                 android:layout_marginBottom="3dp"
                 android:layout_weight="1"
-                android:background="@android:color/white"
+                android:background="@android:color/transparent"
                 android:contentDescription="@string/AddsValue"
                 app:srcCompat="@drawable/kg2_5" />
 
@@ -180,7 +179,7 @@
                 android:layout_marginTop="3dp"
                 android:layout_marginBottom="3dp"
                 android:layout_weight="1"
-                android:background="@android:color/white"
+                android:background="@android:color/transparent"
                 android:contentDescription="@string/AddsValue"
                 app:srcCompat="@drawable/kg5" />
 
@@ -191,7 +190,7 @@
                 android:layout_marginTop="3dp"
                 android:layout_marginBottom="3dp"
                 android:layout_weight="1"
-                android:background="@android:color/white"
+                android:background="@android:color/transparent"
                 android:contentDescription="@string/AddsValue"
                 app:srcCompat="@drawable/kg10" />
         </LinearLayout>
@@ -217,7 +216,7 @@
                 android:layout_marginTop="3dp"
                 android:layout_marginBottom="3dp"
                 android:layout_weight="1"
-                android:background="@android:color/white"
+                android:background="@android:color/transparent"
                 android:contentDescription="@string/AddsValue"
                 app:srcCompat="@drawable/lb25" />
 
@@ -228,7 +227,7 @@
                 android:layout_marginTop="3dp"
                 android:layout_marginBottom="3dp"
                 android:layout_weight="1"
-                android:background="@android:color/white"
+                android:background="@android:color/transparent"
                 android:contentDescription="@string/AddsValue"
                 app:srcCompat="@drawable/lb35" />
 
@@ -255,7 +254,7 @@
                 android:layout_marginTop="3dp"
                 android:layout_marginBottom="3dp"
                 android:layout_weight="1"
-                android:background="@android:color/white"
+                android:background="@android:color/transparent"
                 android:contentDescription="@string/AddsValue"
                 app:srcCompat="@drawable/kg15" />
 
@@ -266,7 +265,7 @@
                 android:layout_marginTop="3dp"
                 android:layout_marginBottom="3dp"
                 android:layout_weight="1"
-                android:background="@android:color/white"
+                android:background="@android:color/transparent"
                 android:contentDescription="@string/AddsValue"
                 app:srcCompat="@drawable/kg20" />
 
@@ -293,7 +292,7 @@
                 android:layout_marginTop="3dp"
                 android:layout_marginBottom="3dp"
                 android:layout_weight="1"
-                android:background="@android:color/white"
+                android:background="@android:color/transparent"
                 android:contentDescription="@string/AddsValue"
                 app:srcCompat="@drawable/lb45" />
         </LinearLayout>
@@ -319,7 +318,7 @@
                 android:layout_marginTop="3dp"
                 android:layout_marginBottom="3dp"
                 android:layout_weight="1"
-                android:background="@android:color/white"
+                android:background="@android:color/transparent"
                 android:contentDescription="@string/AddsValue"
                 app:srcCompat="@drawable/kg25" />
         </LinearLayout>
@@ -330,10 +329,10 @@
         android:id="@+id/kgBarBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="257dp"
         android:layout_marginStart="260dp"
         android:layout_marginLeft="260dp"
-        android:layout_marginTop="257dp"
-        android:background="@android:color/white"
+        android:background="@android:color/transparent"
         android:contentDescription="@string/AddsValue"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -347,7 +346,7 @@
         android:layout_marginTop="257dp"
         android:layout_marginEnd="260dp"
         android:layout_marginRight="260dp"
-        android:background="@android:color/white"
+        android:background="@android:color/transparent"
         android:contentDescription="@string/AddsValue"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
