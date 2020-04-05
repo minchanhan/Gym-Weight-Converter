@@ -40,6 +40,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     EditText inputWeight;
     TextView txtSolution;
     TextView txtDisplayAnswer;
+    Button btnConvert;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,7 +57,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         spinUnit.setAdapter(adapter);
         spinUnit.setOnItemSelectedListener(this);
 
-        Button btnConvert = findViewById(R.id.btnConvert);
+        btnConvert = findViewById(R.id.btnConvert);
         Button btnClear = findViewById(R.id.btnClear);
 
         ImageButton lb2_5Btn = findViewById(R.id.lb2_5Btn);
@@ -195,7 +196,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             linearLB3.setVisibility(View.GONE);
             lbBarBtn.setVisibility(View.GONE);
         }
-
+        onClick(btnConvert);
         Toast.makeText(parent.getContext(), message, Toast.LENGTH_SHORT).show(); /// should be message
     }
 
