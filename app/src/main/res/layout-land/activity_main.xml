@@ -18,10 +18,9 @@
         android:layout_marginTop="34dp"
         android:width="162dp"
         android:autofillHints=""
-        android:ems="10"
         android:hint="@string/defaultZero"
         android:inputType="numberDecimal"
-        android:maxLength="10"
+        android:maxLength="7"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar" />
