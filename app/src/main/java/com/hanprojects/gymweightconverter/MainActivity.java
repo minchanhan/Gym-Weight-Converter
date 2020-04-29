@@ -1,6 +1,5 @@
 package com.hanprojects.gymweightconverter;
 
-import android.app.Activity;
 import android.app.ActivityManager;
 import android.content.ActivityNotFoundException;
 import android.content.DialogInterface;
@@ -8,7 +7,6 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
-import android.os.Build;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -26,7 +24,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -120,8 +117,6 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         }
     }
 
-
-    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     protected void onResume() {
         super.onResume();
@@ -129,8 +124,11 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         Bitmap icon = BitmapFactory.decodeResource(getResources(), R.mipmap.ic_launcher);
         int color = ResourcesCompat.getColor(getResources(), R.color.colorPrimaryDark, null);
 
-        ActivityManager.TaskDescription taskDesc = new ActivityManager.TaskDescription(label, icon, color);
-        setTaskDescription(taskDesc);
+        ActivityManager.TaskDescription taskDesc;
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.LOLLIPOP) {
+            taskDesc = new ActivityManager.TaskDescription(label, icon, color);
+            setTaskDescription(taskDesc);
+        }
     }
 
     @Override
